@@ -3,17 +3,22 @@ import Headerbar from './components/Headerbar/Headerbar';
 import LocationMap from './components/LocationMap/LocationMap';
 import styles from './Eloyeni.styles';
 import Leftnav from './components/Leftnav/Leftnav';
+import NavShell from './components/NavShell/NavShell';
 
 class Eloyeni extends Component {
   render() {
     return (
-      <main className={styles.container}>
+      <div className={styles.container}>
         <Headerbar />
-        <Leftnav navSrc={'../nav.json'} />
-        <LocationMap
-          mapSrc={"../unclear_map.jpg"}
-        />
-      </main >
+        <div className={'wrapper'}>
+          <Leftnav navSrc={'../nav.json'} />
+          <NavShell>
+            <LocationMap
+              mapSrc={"../unclear_map.jpg"}
+            />
+          </NavShell>
+        </div>
+      </div >
     );
   }
 }

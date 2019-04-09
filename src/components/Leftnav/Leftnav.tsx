@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { LeftnavProps, LeftnavState, Section, NavPayload } from './Leftnav.types';
+import { LeftnavProps, LeftnavState, Section, NavPayload, Building } from './Leftnav.types';
 import axios from 'axios';
+import { MenuItem } from '@material-ui/core';
 
 class Leftnav extends Component<LeftnavProps, LeftnavState> {
     private sections: Section[] = []
@@ -18,6 +19,10 @@ class Leftnav extends Component<LeftnavProps, LeftnavState> {
         });
     }
 
+    private setBuilding(building: Building): string {
+        return ''
+    }
+
     componentDidMount() {
         // @ts-ignore
         this.getNav(this.props.navSrc)
@@ -25,9 +30,7 @@ class Leftnav extends Component<LeftnavProps, LeftnavState> {
 
     renderSection(section: Section): JSX.Element {
         return (
-            <section>
-                {section.name}
-            </section>
+            <MenuItem>{section.name}</MenuItem>
         )
     }
 

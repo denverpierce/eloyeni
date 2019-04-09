@@ -17,13 +17,13 @@ class LocationMap extends Component<LocationMapProps, LocationMapState> {
     render() {
         const { mapSrc } = this.props;
         return (
-            <div className={styles.mainContainer}>
+            <main className={styles.mainContainer}>
                 <img
                     src={mapSrc}
                     className={styles.mapContainer}
                 >
                 </img>
-            </div>
+            </main>
         );
     }
 }
