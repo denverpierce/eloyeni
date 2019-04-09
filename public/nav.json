@@ -1,0 +1,60 @@
+{
+    "sections":[
+        {
+            "id":"NW",
+            "name":"NW",
+            "buildings":[
+                {
+                    "id":"b",
+                    "name":"c",
+                    "location": {
+                        "x":1,
+                        "y":2
+                    }
+                }
+            ]
+        },
+        {
+            "id":"NE",
+            "name":"NE",
+            "buildings":[
+                {
+                    "id":"b",
+                    "name":"c",
+                    "location": {
+                        "x":1,
+                        "y":2
+                    }
+                }
+            ]
+        },
+        {
+            "id":"SE",
+            "name":"SE",
+            "buildings":[
+                {
+                    "id":"b",
+                    "name":"c",
+                    "location": {
+                        "x":1,
+                        "y":2
+                    }
+                }
+            ]
+        },
+        {
+            "id":"SW",
+            "name":"SW",
+            "buildings":[
+                {
+                    "id":"b",
+                    "name":"c",
+                    "location": {
+                        "x":1,
+                        "y":2
+                    }
+                }
+            ]
+        }
+    ]
+}
