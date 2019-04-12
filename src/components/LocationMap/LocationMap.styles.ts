@@ -1,17 +1,23 @@
 import { style } from "typestyle";
 
 const mapContainer = style(
-    {
-        height: '100%',
-        marginLeft: 'auto'
-    }
+  {
+    height: '100%',
+    marginLeft: 'auto'
+  }
 );
 
 const mainContainer = style({
-    display: 'flex'
+  display: 'flex',
+  width: '100%',
+  $nest: {
+    'img': {
+      width: '100%'
+    }
+  }
 })
 
 export default {
-    mapContainer,
-    mainContainer
+  mapContainer,
+  mainContainer
 }

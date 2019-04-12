@@ -1,30 +1,30 @@
 export interface BasicItem {
-    id: string;
-    name: string;
+  id: string;
+  name: string;
 }
 
 export interface Location {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 }
 
-export interface Building {
-    location: Location
+export interface Building extends BasicItem {
+  location: Location
 }
 
 export interface Section extends BasicItem {
-    building: Building[]
+  buildings: Building[]
 }
 
 export interface NavPayload {
-    sections: Section[]
+  sections: Section[]
 }
 
 export type LeftnavProps = {
-    navSrc: string
+  navSrc: string
 };
 
 export type LeftnavState = {
-    currentBuilding: string | undefined,
-    sections: Section[]
+  currentBuilding: Building | undefined,
+  sections: Section[]
 };
