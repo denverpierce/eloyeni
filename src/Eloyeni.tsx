@@ -14,7 +14,7 @@ class Eloyeni extends Component {
           <Leftnav navSrc={'../nav.json'} />
           <NavShell>
             <LocationMap
-              mapSrc={"../unclear_map.jpg"}
+              mapSrc={"../map.svg"}
             />
           </NavShell>
         </div>

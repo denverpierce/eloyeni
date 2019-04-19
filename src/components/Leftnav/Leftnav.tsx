@@ -26,13 +26,13 @@ class Leftnav extends Component<LeftnavProps, LeftnavState> {
     this.getNav(this.props.navSrc)
   }
 
-  renderSection = (section: Section): JSX.Element => {
+  renderSection = (section: Section, idx: number): JSX.Element => {
     return (
-      <div>
-        <ListItem >
+      <div key={idx}>
+        <ListItem>
           {section.name}
           {section.buildings ? section.buildings.map(this.renderBuilding) : null}
-        </ListItem >
+        </ListItem>
       </div>
     )
   }
@@ -52,9 +52,10 @@ class Leftnav extends Component<LeftnavProps, LeftnavState> {
 
   }
 
-  renderBuilding = (building: Building): JSX.Element => {
+  renderBuilding = (building: Building, idx: number): JSX.Element => {
     return (
       <MenuItem
+        key={idx}
         onClick={this.handleClickBuilding}
       >
         {building.name}

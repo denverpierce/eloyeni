@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "jasmine": true,
+    "jest": true
+  },
+  "rules": {
+    "@typescript-eslint/indent":[
+      "warn", 2
+    ],
+    "@typescript-eslint/prefer-interface":0,
+    "@typescript-eslint/explicit-function-return-type":0,
+    "react/display-name":0,
+    "@typescript-eslint/member-delimiter-style":0,
+    "@typescript-eslint/explicit-member-accessibility":["warn", { "accessibility ": "no-public" }]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}
