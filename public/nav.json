@@ -1,60 +1,102 @@
 {
-    "sections":[
-        {
-            "id":"NW",
-            "name":"NW",
-            "buildings":[
-                {
-                    "id":"b",
-                    "name":"c",
-                    "location": {
-                        "x":1,
-                        "y":2
-                    }
-                }
-            ]
-        },
-        {
-            "id":"NE",
-            "name":"NE",
-            "buildings":[
-                {
-                    "id":"b",
-                    "name":"c",
-                    "location": {
-                        "x":1,
-                        "y":2
-                    }
-                }
-            ]
-        },
-        {
-            "id":"SE",
-            "name":"SE",
-            "buildings":[
-                {
-                    "id":"b",
-                    "name":"c",
-                    "location": {
-                        "x":1,
-                        "y":2
-                    }
-                }
-            ]
-        },
-        {
-            "id":"SW",
-            "name":"SW",
-            "buildings":[
-                {
-                    "id":"b",
-                    "name":"c",
-                    "location": {
-                        "x":1,
-                        "y":2
-                    }
-                }
-            ]
-        }
-    ]
+  "buildings": [
+    {
+      "id": "b1",
+      "name": "Ramps",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": 5
+    },
+    {
+      "id": "b2",
+      "name": "Golden Terrace Wall",
+      "description": "",
+      "status": "Unknown",
+      "infestationLevel": 5
+    },
+    {
+      "id": "b3",
+      "name": "The Invisible Bridges",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": null
+    },
+    {
+      "id": "b4",
+      "name": "Discordant Tower",
+      "description": "",
+      "status": "Infested",
+      "infestationLevel": 4
+    },
+    {
+      "id": "b5",
+      "name": "Stalker's Nest",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": null
+    },
+    {
+      "id": "b6",
+      "name": "Quivering Tower",
+      "description": "",
+      "status": "Infested",
+      "infestationLevel": 3
+    },
+    {
+      "id": "b7",
+      "name": "Needle and Globe Tower",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": 1
+    },
+    {
+      "id": "b8",
+      "name": "The Aeromatic Mechanum",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": 5
+    },
+    {
+      "id": "b9",
+      "name": "Flying Library",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": null
+    },
+    {
+      "id": "b10",
+      "name": "Carillon Tower",
+      "description": "",
+      "status": "Pacified",
+      "infestationLevel": null
+    },
+    {
+      "id": "b11",
+      "name": "Beehive Tomb",
+      "description": "",
+      "status": "Infested",
+      "infestationLevel": 5
+    },
+    {
+      "id": "b12",
+      "name": "The Brass Anchor",
+      "description": "",
+      "status": "Infested",
+      "infestationLevel": 3
+    },
+    {
+      "id": "b13",
+      "name": "Ape House",
+      "description": "",
+      "status": "Infested",
+      "infestationLevel": 1
+    },
+    {
+      "id": "b14",
+      "name": "The Foresaken Palace",
+      "description": "",
+      "status": "Unknown",
+      "infestationLevel": 999
+    }
+  ]
 }

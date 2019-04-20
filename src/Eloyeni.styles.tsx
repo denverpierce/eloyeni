@@ -9,10 +9,7 @@ const container = style({
       display: 'flex',
       $nest: {
         nav: {
-          width: '20%'
-        },
-        main: {
-          width: '80%'
+          width: '300px'
         }
       }
     }

@@ -1,79 +1,53 @@
-import React, { Component } from 'react';
-import { LeftnavProps, LeftnavState, Section, NavPayload, Building } from './Leftnav.types';
-import axios from 'axios';
+import React, { useState, useEffect, Dispatch } from 'react';
+
 import styles from './Leftnav.styles'
-import { List, ListSubheader, ListItem, MenuItem } from '@material-ui/core';
+import { List, ListSubheader, MenuItem } from '@material-ui/core';
+import { Building } from '../../state/Buildings.reducer';
 
-class Leftnav extends Component<LeftnavProps, LeftnavState> {
-  private sections: Section[] = []
-  private header: JSX.Element = (<ListSubheader component="div">City Sections</ListSubheader>)
+export interface BasicItem {
+  id: string;
+  name: string;
+}
 
-  constructor(props: LeftnavProps) {
-    super(props);
-    this.state = {
-      sections: [],
-      currentBuilding: undefined
-    }
-  }
+export interface NavPayload {
+  buildings: Building[]
+}
 
-  private getNav = (navSrc: string) => {
-    return axios.get<NavPayload>(`${navSrc}`).then(resp => {
-      this.setState({ sections: resp.data.sections });
-    });
-  }
+export type LeftnavProps = {
+  selectBuilding: Dispatch<any>
+  buildings: Building[]
+};
 
-  componentDidMount() {
-    this.getNav(this.props.navSrc)
-  }
+const header: JSX.Element = (<ListSubheader component="div">City Buildings</ListSubheader>);
+function Leftnav(props: LeftnavProps) {
 
-  renderSection = (section: Section, idx: number): JSX.Element => {
-    return (
-      <div key={idx}>
-        <ListItem>
-          {section.name}
-          {section.buildings ? section.buildings.map(this.renderBuilding) : null}
-        </ListItem>
-      </div>
-    )
-  }
-
-  findBuidling(bldId: HTMLElement): Building | void {
-    const allBuildings = this.state.sections.map(section => section.buildings);
-    return allBuildings[0].find(bld => bld.id == bldId.id) as any as Building;
-  }
-
-  handleClickBuilding = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    const bld = this.findBuidling(event as any) as any as Building;
-    if (bld) {
-      return this.setState({
-        currentBuilding: this.state.sections[0].buildings[0]
-      });
-    }
-
-  }
-
-  renderBuilding = (building: Building, idx: number): JSX.Element => {
+  const renderBuilding = (building: Building, idx: number): JSX.Element => {
     return (
       <MenuItem
         key={idx}
-        onClick={this.handleClickBuilding}
+        onClick={(e: React.MouseEvent) => props.selectBuilding({
+          type: 'selectBuilding',
+          selectedBuilding: building
+        })}
       >
         {building.name}
       </MenuItem >
     )
   }
 
-  render() {
-    const { sections } = this.state;
+  return (
+    <React.Fragment>
 
-    return (
       <List
         component="nav"
+        subheader={header}
         className={styles.leftNavContainer}>
-        {sections ? sections.map(this.renderSection) : null}
+        {props.buildings.map(renderBuilding)}
       </List>
-    );
-  }
+    </React.Fragment>
+  );
 }
+
+
 
 export default Leftnav;
