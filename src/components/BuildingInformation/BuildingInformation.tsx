@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building } from './../../state/Buildings.reducer';
-import { Card, CardActionArea, CardMedia, CardContent, Typography, CardActions, Button, Table, TableHead, TableRow, TableCell, TableBody, Chip } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, Typography, CardActions, Table, TableHead, TableRow, TableCell, TableBody, Chip } from '@material-ui/core';
 import styles from './BuildingInformation.styles';
 
 type BuildingInformationProps = {
