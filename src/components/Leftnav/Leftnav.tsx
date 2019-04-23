@@ -15,6 +15,7 @@ export interface NavPayload {
 
 export type LeftnavProps = {
   selectBuilding: Dispatch<any>
+  selectedBuilding: Building | null;
   buildings: Building[]
 };
 
@@ -22,13 +23,18 @@ const header: JSX.Element = (<ListSubheader component="div">City Buildings</List
 function Leftnav(props: LeftnavProps) {
 
   const renderBuilding = (building: Building, idx: number): JSX.Element => {
+    const bldArrIndex = props.selectedBuilding ?
+      props.buildings.findIndex(bld => bld.id === props.selectedBuilding!.id) : -1;
+
     return (
       <MenuItem
         key={idx}
+        selected={idx === bldArrIndex}
         onClick={(e: React.MouseEvent) => props.selectBuilding({
           type: 'selectBuilding',
           selectedBuilding: building
         })}
+
       >
         {building.name}
       </MenuItem >
@@ -37,7 +43,6 @@ function Leftnav(props: LeftnavProps) {
 
   return (
     <React.Fragment>
-
       <List
         component="nav"
         subheader={header}

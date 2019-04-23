@@ -1,21 +1,22 @@
 import { style } from "typestyle";
+import { rgba } from 'csx';
 
-const mapContainer = style(
-  {
-    height: '100%',
-    marginRight: 'auto'
-  }
-);
-
-const mainContainer = style({
-  display: 'flex',
-  $nest: {
-    'img': {
+const mainContainer = (buildingId: string | null) => {
+  return style({
+    display: 'flex',
+    $nest: {
+      [`#${buildingId}`]: {
+        fill: rgba(255, 255, 255, 0.3).toString(),
+        stroke: '#d93381'
+      },
+      'g': {
+        strokeWidth: 3,
+        fill: '#00c4ff75',
+      }
     }
-  }
-})
+  })
+}
 
 export default {
-  mapContainer,
   mainContainer
 }

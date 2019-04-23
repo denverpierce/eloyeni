@@ -29,12 +29,12 @@ export default (props: LocationMapProps) => {
       })
     }
   }
+  const id = selectedBuilding ? selectedBuilding.id : 'b1'
 
   return (
-    <main className={styles.mainContainer}>
+    <main className={styles.mainContainer(id)}>
       <ReactSVG
         src={mapSrc}
-        className={styles.mapContainer}
         onInjected={(er, svg) => setRdy(true)}
         onClick={handleClickBuilding}
       />

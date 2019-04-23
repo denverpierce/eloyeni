@@ -27,6 +27,7 @@ function NavShell(props: NavShellProps) {
       <Leftnav
         buildings={state.buildings}
         selectBuilding={dispatch}
+        selectedBuilding={state.selectedBuilding}
       />
       <LocationMap
         selectBuilding={dispatch}
