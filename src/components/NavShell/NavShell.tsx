@@ -1,5 +1,5 @@
-import React, { Component, useReducer, useState, useEffect } from 'react';
-import { buildingsReducer, Building } from '../../state/Buildings.reducer';
+import React, { useReducer, useEffect } from 'react';
+import { buildingsReducer } from '../../state/Buildings.reducer';
 import { buildingsInit } from './../../state/Buildings.reducer';
 import Leftnav, { NavPayload } from '../Leftnav/Leftnav';
 import axios from 'axios';
@@ -20,7 +20,7 @@ function NavShell(props: NavShellProps) {
         buildings: resp.data.buildings
       })
     })
-  }, []);
+  }, [props.navSrc]);
 
   return (
     <React.Fragment>

@@ -2,99 +2,113 @@
   "buildings": [
     {
       "id": "b1",
-      "name": "Ramps",
-      "description": "",
+      "name": "1. Docks",
+      "description": "The massive wall is broken here by a series of five gates. Descending from these open archways down to the level of the plain are five ramps made of the same golden translucent material as the walls. Beyond the gates, the streets and alleys of the city are only partially visible, shrouded by a pale green mist that seems to seep out of the walls and cling to the ground.",
       "status": "Pacified",
-      "infestationLevel": 5
+      "infestationLevel": null
     },
     {
       "id": "b2",
-      "name": "Golden Terrace Wall",
-      "description": "",
-      "status": "Unknown",
-      "infestationLevel": 5
+      "name": "2. Golden Terrace Wall",
+      "description": "Upon closer examination, it’s still unclear exactly what this wall is made of, as it resembles nearly opaque amber.",
+      "status": "Pacified",
+      "infestationLevel": null
     },
     {
       "id": "b3",
-      "name": "The Invisible Bridges",
-      "description": "",
+      "name": "3. The Invisible Bridges",
+      "description": "These invisible, enclosed bridges connect the Aeromantic Infandibulum with the city’s other major towers: the Discordant Tower, the Needle and Globe Tower, the Quivering Tower, and the Stalker’s Nest. These bridges are tunnels made of pure force and cannot be dispelled",
       "status": "Pacified",
       "infestationLevel": null
     },
     {
       "id": "b4",
-      "name": "Discordant Tower",
-      "description": "",
+      "name": "4. Discordant Tower",
+      "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind. Near the tower, the noise is nearly deafening. The grating tones are loud enough to rattle teeth.",
       "status": "Infested",
       "infestationLevel": 4
     },
     {
       "id": "b5",
-      "name": "Stalker's Nest",
-      "description": "",
+      "name": "5. Stalker's Nest",
+      "description": "The glass flower is eighty feet tall, but the glass is white rather than clear. There is no movement at the top, and no obvious way to enter the interior.",
       "status": "Pacified",
       "infestationLevel": null
     },
     {
       "id": "b6",
-      "name": "Quivering Tower",
-      "description": "",
+      "name": "6. Quivering Tower",
+      "description": "This seventy-foot-tall, gray stone tower is covered with rubbery gray leaves and feelers. These fernlike leaves quiver in the breeze. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below one balcony in particular.",
+      "status": "Infested",
+      "infestationLevel": 4
+    },
+    {
+      "id": "b7",
+      "name": "7. Needle and Globe Tower",
+      "description": "This tower resembles a very thin reed or stalk with a puffball globe stuck halfway up the tower, fifty feet above the ground. The surface of the walls look like chitin, and numerous cracks ooze a sticky yellow sap.",
       "status": "Infested",
       "infestationLevel": 3
     },
     {
-      "id": "b7",
-      "name": "Needle and Globe Tower",
-      "description": "",
-      "status": "Pacified",
-      "infestationLevel": 1
-    },
-    {
       "id": "b8",
-      "name": "The Aeromatic Mechanum",
-      "description": "",
+      "name": "8. The Aeromatic Mechanum",
+      "description": "This building resembles an enormous horn pointed to the sky, standing more than a hundred feet tall. It has a narrow section resting on the ground and a brilliant purple metallic cone pointing up into green mist. There seems to be no entrance at ground level, but each wall has a large hole on the right-hand side about halfway up the tower.",
       "status": "Pacified",
-      "infestationLevel": 5
+      "infestationLevel": null
     },
     {
       "id": "b9",
-      "name": "Flying Library",
-      "description": "",
+      "name": "9. Flying Library",
+      "description": "The building has that unmistakable smell of parchment and papyrus that means ancient lore. Hundreds of books are piled neatly on the tables, and many scrolls are held open with paperweights. A humanoid skeleton sits in one of the chairs here, a book still open on the table at its side. A high-pitched chattering comes from the rafters overhead.",
       "status": "Pacified",
       "infestationLevel": null
     },
     {
       "id": "b10",
-      "name": "Carillon Tower",
-      "description": "",
+      "name": "10. Carillon Tower",
+      "description": "This stone tower has a red tile roof and an empty interior, except for some frescos painted where a stone staircase once led up to some sort of ruined machinery near the top of the tower. The frescos near the bottom seem to show a parade of citizens and a few tall towers and buildings. The higher paintings are difficult to see from the bottom. A huge pit in the center of the floor seems to drop down at least thirty feet. ",
       "status": "Pacified",
       "infestationLevel": null
     },
     {
       "id": "b11",
-      "name": "Beehive Tomb",
-      "description": "",
+      "name": "11. Beehive Tomb",
+      "description": "This building is entirely given over to a single round chamber shaped roughly like a beehive. In the very middle is a sarcophagus and a small altar covered with bright yellow flowers and dead, brightly colored birds.",
       "status": "Infested",
-      "infestationLevel": 5
+      "infestationLevel": 6
     },
     {
       "id": "b12",
-      "name": "The Brass Anchor",
-      "description": "",
+      "name": "12. The Brass Anchor",
+      "description": "The ground here contains a ring of golden metal under a thin layer of dirt and leaves. The metal ring is about four feet in diameter. There seem to be some runes written along the inside of the ring.",
       "status": "Infested",
-      "infestationLevel": 3
+      "infestationLevel": 1
     },
     {
       "id": "b13",
-      "name": "Ape House",
-      "description": "",
+      "name": "13. Ape House",
+      "description": "This house seems to have no interior floors, although it is easily thirty feet high. The roof is pierced with four entryways, but there is only one entrance on the ground floor, and it doesn’t seem to connect with anything else. There’s not even a sign of fallen stairs here, though there are niches along every wall about every eight feet or so.",
       "status": "Infested",
       "infestationLevel": 1
     },
     {
       "id": "b14",
-      "name": "The Foresaken Palace",
-      "description": "",
+      "name": "14. The Foresaken Palace",
+      "description": "This massive building was obviously important to the city’s residents, but its original form and function are difficult to determine now. Most of the building has been gutted, and where once hung rich adornments is now nothing but bare wall.",
+      "status": "Pacified",
+      "infestationLevel": null
+    },
+    {
+      "id": "b15",
+      "name": "15. The Temple",
+      "description": "UNKNOWN",
+      "status": "Unknown",
+      "infestationLevel": 999
+    },
+    {
+      "id": "b16",
+      "name": "16. UNKNOWN",
+      "description": "UNKNOWN",
       "status": "Unknown",
       "infestationLevel": 999
     }

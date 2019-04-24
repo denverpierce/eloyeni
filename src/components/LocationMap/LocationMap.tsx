@@ -1,4 +1,4 @@
-import React, { useState, Dispatch } from 'react';
+import React, { Dispatch } from 'react';
 import styles from './LocationMap.styles';
 import ReactSVG from 'react-svg';
 import { Building, BuildingState } from '../../state/Buildings.reducer';
@@ -12,11 +12,10 @@ type LocationMapProps = {
 
 export default (props: LocationMapProps) => {
   const { mapSrc } = props;
-  const [rdy, setRdy] = useState(false);
   const { selectedBuilding, buildings } = props.buildingState;
 
   const findBuidling = (bldId: string): Building | void => {
-    return buildings.find(bld => bld.id == bldId);
+    return buildings.find(bld => bld.id === bldId);
   }
 
   const handleClickBuilding = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
@@ -35,7 +34,6 @@ export default (props: LocationMapProps) => {
     <main className={styles.mainContainer(id)}>
       <ReactSVG
         src={mapSrc}
-        onInjected={(er, svg) => setRdy(true)}
         onClick={handleClickBuilding}
       />
     </main>

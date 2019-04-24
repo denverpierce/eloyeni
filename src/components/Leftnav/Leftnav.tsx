@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Dispatch } from 'react';
+import React, { Dispatch } from 'react';
 
 import styles from './Leftnav.styles'
 import { List, ListSubheader, MenuItem } from '@material-ui/core';
@@ -30,7 +30,7 @@ function Leftnav(props: LeftnavProps) {
       <MenuItem
         key={idx}
         selected={idx === bldArrIndex}
-        onClick={(e: React.MouseEvent) => props.selectBuilding({
+        onClick={() => props.selectBuilding({
           type: 'selectBuilding',
           selectedBuilding: building
         })}
