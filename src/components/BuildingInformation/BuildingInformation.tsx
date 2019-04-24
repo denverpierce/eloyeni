@@ -33,21 +33,23 @@ export default function (props: BuildingInformationProps) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        {cardBuilding.status ? (<Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Status</TableCell>
-              <TableCell>Infestation Level</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>{cardBuilding.status}</TableCell>
-              <TableCell>{cardBuilding.infestationLevel ? (<Chip color="primary" label={cardBuilding.infestationLevel} />) : null}</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>) : null}
+      <CardActions className={styles.table}>
+        {cardBuilding.status ? (
+          <Table>
+            <TableHead >
+              <TableRow>
+                <TableCell>Status</TableCell>
+                <TableCell>Infestation Level</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>{cardBuilding.status}</TableCell>
+                <TableCell>{cardBuilding.infestationLevel ? (<Chip color="primary" label={cardBuilding.infestationLevel} />) : null}</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        ) : null}
       </CardActions>
     </Card>
   )
