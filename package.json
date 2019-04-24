@@ -2,6 +2,7 @@
   "name": "eloyeni",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://denverpierce.github.io/eloyeni",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@types/jest": "24.0.11",
@@ -11,6 +12,7 @@
     "@types/react-dom": "16.8.3",
     "axios": "^0.18.0",
     "csx": "^9.1.0",
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "querystring": "^0.2.0",
     "react": "^16.8.6",
@@ -21,6 +23,8 @@
     "typestyle": "^2.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
