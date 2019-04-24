@@ -5,7 +5,7 @@ import { Building, BuildingState } from '../../state/Buildings.reducer';
 import { get } from 'lodash';
 
 type LocationMapProps = {
-  mapSrc: string,
+  mapSrc: string | undefined,
   selectBuilding: Dispatch<any>,
   buildingState: BuildingState
 };
@@ -32,10 +32,12 @@ export default (props: LocationMapProps) => {
 
   return (
     <main className={styles.mainContainer(id)}>
-      <ReactSVG
-        src={mapSrc}
-        onClick={handleClickBuilding}
-      />
+      {mapSrc ? (
+        <ReactSVG
+          src={mapSrc}
+          onClick={handleClickBuilding}
+        />
+      ) : null}
     </main>
   );
 }

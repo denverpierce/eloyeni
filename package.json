@@ -12,6 +12,7 @@
     "axios": "^0.18.0",
     "csx": "^9.1.0",
     "lodash": "^4.17.11",
+    "querystring": "^0.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
