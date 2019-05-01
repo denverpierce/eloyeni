@@ -7,7 +7,7 @@ const mainContainer = (buildingId: string | null) => {
     $nest: {
       [`#${buildingId}`]: {
         fill: rgba(255, 255, 255, 0.3).toString(),
-        stroke: '#d93381'
+        stroke: '#d93381 !important'
       },
       'g': {
         strokeWidth: 3,
