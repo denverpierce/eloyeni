@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "78944b6d8203c42bf67ac156385b6b32",
+    "revision": "69628d1d00612439a2e03bf490aa8175",
     "url": "/eloyeni/index.html"
   },
   {
-    "revision": "57f904fbc340853f949b",
-    "url": "/eloyeni/static/css/main.81e23f9e.chunk.css"
+    "revision": "3d70266768fbbd232a50",
+    "url": "/eloyeni/static/css/main.a11e7c7c.chunk.css"
   },
   {
     "revision": "b2634a3b7358cf86e11c",
     "url": "/eloyeni/static/js/2.e0027b5a.chunk.js"
   },
   {
-    "revision": "57f904fbc340853f949b",
-    "url": "/eloyeni/static/js/main.ae6b3658.chunk.js"
+    "revision": "3d70266768fbbd232a50",
+    "url": "/eloyeni/static/js/main.5b4e2167.chunk.js"
   },
   {
     "revision": "aa00378335d1e0995650",

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/eloyeni/static/css/main.81e23f9e.chunk.css",
-    "main.js": "/eloyeni/static/js/main.ae6b3658.chunk.js",
-    "main.js.map": "/eloyeni/static/js/main.ae6b3658.chunk.js.map",
+    "main.css": "/eloyeni/static/css/main.a11e7c7c.chunk.css",
+    "main.js": "/eloyeni/static/js/main.5b4e2167.chunk.js",
+    "main.js.map": "/eloyeni/static/js/main.5b4e2167.chunk.js.map",
     "runtime~main.js": "/eloyeni/static/js/runtime~main.9c69e164.js",
     "runtime~main.js.map": "/eloyeni/static/js/runtime~main.9c69e164.js.map",
     "static/js/2.e0027b5a.chunk.js": "/eloyeni/static/js/2.e0027b5a.chunk.js",
     "static/js/2.e0027b5a.chunk.js.map": "/eloyeni/static/js/2.e0027b5a.chunk.js.map",
     "index.html": "/eloyeni/index.html",
-    "precache-manifest.fc0c949599b7e5d90207620aa28a509e.js": "/eloyeni/precache-manifest.fc0c949599b7e5d90207620aa28a509e.js",
+    "precache-manifest.55af7e7e61587f79f78e5cdeadc70cef.js": "/eloyeni/precache-manifest.55af7e7e61587f79f78e5cdeadc70cef.js",
     "service-worker.js": "/eloyeni/service-worker.js",
-    "static/css/main.81e23f9e.chunk.css.map": "/eloyeni/static/css/main.81e23f9e.chunk.css.map"
+    "static/css/main.a11e7c7c.chunk.css.map": "/eloyeni/static/css/main.a11e7c7c.chunk.css.map"
   }
 }

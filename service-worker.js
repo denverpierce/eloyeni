@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/eloyeni/precache-manifest.fc0c949599b7e5d90207620aa28a509e.js"
+  "/eloyeni/precache-manifest.55af7e7e61587f79f78e5cdeadc70cef.js"
 );
 
 self.addEventListener('message', (event) => {
