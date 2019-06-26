@@ -46,8 +46,8 @@
       "id": "b7",
       "name": "7. Needle and Globe Tower",
       "description": "This tower resembles a very thin reed or stalk with a puffball globe stuck halfway up the tower, fifty feet above the ground. The surface of the walls look like chitin, and numerous cracks ooze a sticky yellow sap.",
-      "status": "Infested",
-      "infestationLevel": 3
+      "status": "Pacified",
+      "infestationLevel": null
     },
     {
       "id": "b8",
@@ -91,7 +91,7 @@
     },
     {
       "id": "b14",
-      "name": "14. The Foresaken Palace",
+      "name": "14. The Palace",
       "description": "This massive building was once home to the Prince's that controlled the city, and where they held court. Most of the building has been gutted, and where once hung rich adornments is now nothing but bare wall.  Undead romed it's halls for untold ages, before adventurer's cleansed the place.",
       "status": "Pacified",
       "infestationLevel": null
