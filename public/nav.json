@@ -22,8 +22,8 @@
       "infestationLevel": null
     },
     {
-      "id": "b4",
-      "name": "4. Discordant Tower",
+      "id": "b6",
+      "name": "6. Discordant Tower",
       "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind. Near the tower, the noise is nearly deafening. The grating tones are loud enough to rattle teeth.",
       "status": "Infested",
       "infestationLevel": 3
@@ -36,8 +36,8 @@
       "infestationLevel": null
     },
     {
-      "id": "b6",
-      "name": "6. Quivering Tower",
+      "id": "b4",
+      "name": "4. Quivering Tower",
       "description": "This seventy-foot-tall, gray stone tower is covered with rubbery gray leaves and feelers. These fernlike leaves quiver in the breeze. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below one balcony in particular.  There are numerous spikey protrusions coming out of the stone, some of which are blackened and bent.",
       "status": "Infested",
       "infestationLevel": 4
