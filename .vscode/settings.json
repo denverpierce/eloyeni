@@ -1,4 +1,5 @@
 {
+  "workbench.colorTheme": "Base16 Dark Bespin",
     "eslint.enable": true,
       "eslint.validate": [
         "javascript",
