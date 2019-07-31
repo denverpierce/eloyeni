@@ -24,9 +24,9 @@
     {
       "id": "b6",
       "name": "6. Discordant Tower",
-      "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind. Near the tower, the noise is nearly deafening. The grating tones are loud enough to rattle teeth.",
-      "status": "Infested",
-      "infestationLevel": 3
+      "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind, looking like a gigantic staff in the sky filled with holes. Dark shadows can be seen flitting inside the structure, never clear enough to make out.  Occasionally, loud grunting and snorting can be heard coming from the tower.",
+      "status": "Pacified",
+      "infestationLevel": null
     },
     {
       "id": "b5",
@@ -38,9 +38,9 @@
     {
       "id": "b4",
       "name": "4. Quivering Tower",
-      "description": "This seventy-foot-tall, gray stone tower is covered with rubbery gray leaves and feelers. These fernlike leaves quiver in the breeze. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below one balcony in particular.  There are numerous spikey protrusions coming out of the stone, some of which are blackened and bent.",
+      "description": "Small bursts of static and arcs of electricity can be seen from this seventy-foot-tall, gray stone tower. Fernlike leaves quiver along it's face. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below them.  There are numerous spikey protrusions coming out of the stone, some of which are blackened and bent.",
       "status": "Infested",
-      "infestationLevel": 4
+      "infestationLevel": 6
     },
     {
       "id": "b7",
@@ -75,7 +75,7 @@
       "name": "11. Cloedel Conservatory",
       "description": "This low round building appears to have once had some manner of trellis or ribbed canopy over it, that once may have served as some kind of roof.  What remains of the foundation is overgrown with a variety of thick mosses, low herbs, shrubbery, and lichen.",
       "status": "Infested",
-      "infestationLevel": 6
+      "infestationLevel": 5
     },
     {
       "id": "b12",
