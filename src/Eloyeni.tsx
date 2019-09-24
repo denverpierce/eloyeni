@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Headerbar from './components/Headerbar/Headerbar';
 import styles from './Eloyeni.styles';
 import NavShell from './components/NavShell/NavShell';
 import qs from 'querystring';
@@ -8,10 +7,26 @@ export type EloyeniState = {
   mapUrl: string | undefined,
   mapSig: string | undefined
   navUrl: string | undefined,
-  navSig: string | undefined
+  navSig: string | undefined,
+  tab: number
 }
 
 class Eloyeni extends Component<{}, EloyeniState> {
+  constructor(p: {}) {
+    super(p);
+    this.state = {
+      tab: 1,
+      mapUrl: undefined,
+      mapSig: undefined,
+      navUrl: undefined,
+      navSig: undefined
+    };
+  }
+
+  eventToTab = (e: React.ChangeEvent<{}>, value: {}): void => {
+    const val = value as number;
+    this.setState({ tab: val });
+  }
 
   componentDidMount() {
     // storing the auth in the query string
@@ -30,9 +45,8 @@ class Eloyeni extends Component<{}, EloyeniState> {
   render() {
     return (
       <div className={styles.container}>
-        <Headerbar />
         <div className={'wrapper'}>
-          <NavShell auth={this.state} />
+          <NavShell auth={this.state} handleChangeTab={this.eventToTab} />
         </div>
       </div >
     );

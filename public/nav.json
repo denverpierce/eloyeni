@@ -1,114 +1,125 @@
 {
-  "buildings": [
+  "tabs":[
     {
-      "id": "b1",
-      "name": "1. Docks",
-      "description": "The massive wall is broken here by a series of five gates. Descending from these open archways down to the level of the plain are five ramps made of the same golden translucent material as the walls. Beyond the gates, the streets and alleys of the city are only partially visible, shrouded by a pale green mist that seems to seep out of the walls and cling to the ground.",
-      "status": "Pacified",
-      "infestationLevel": null
+      "type":"status",
+      "id":"status",
+      "buildings":[]
     },
     {
-      "id": "b2",
-      "name": "2. Golden Terrace Wall",
-      "description": "Upon closer examination, it’s still unclear exactly what this wall is made of, as it resembles nearly opaque amber.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b3",
-      "name": "3. The Invisible Bridges",
-      "description": "These invisible, enclosed bridges connect the Aeromantic Infandibulum with the city’s other major towers: the Discordant Tower, the Needle and Globe Tower, the Quivering Tower, and the Stalker’s Nest. These bridges are tunnels made of pure force and cannot be dispelled.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b6",
-      "name": "6. Discordant Tower",
-      "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind, looking like a gigantic staff in the sky filled with holes. Dark shadows can be seen flitting inside the structure, never clear enough to make out.  Occasionally, loud grunting and snorting can be heard coming from the tower.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b5",
-      "name": "5. The Azlanti Flower",
-      "description": "This glass flower is eighty feet tall, but the glass is white rather than clear. It glows with a faint light during the full moon.  A building that envelopes it's base contains an orb of some kind, that allow the light level to be controlled, when it still functioned.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b4",
-      "name": "4. Quivering Tower",
-      "description": "Small bursts of static and arcs of electricity can be seen from this seventy-foot-tall, gray stone tower. Fernlike leaves quiver along it's face. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below them.  There are numerous spikey protrusions coming out of the stone, some of which are blackened and bent.",
-      "status": "Infested",
-      "infestationLevel": 6
-    },
-    {
-      "id": "b7",
-      "name": "7. Needle and Globe Tower",
-      "description": "This tower resembles a very thin reed or stalk with a puffball globe stuck halfway up the tower, fifty feet above the ground. The surface of the walls look like chitin, and numerous cracks ooze a sticky yellow sap.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b8",
-      "name": "8. The Aeromatic Mechanum",
-      "description": "This building resembles an enormous horn pointed to the sky, standing more than a hundred feet tall. It has a narrow section resting on the ground and a brilliant purple metallic cone pointing up into green mist. There seems to be no entrance at ground level, but each wall has a large hole on the right-hand side about halfway up the tower.  In times long past, the Mechanum allowed the city to rise and fall great heights through the air.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b9",
-      "name": "9. Flying Library",
-      "description": "The building has that unmistakable smell of parchment and papyrus that means ancient lore. Hundreds of books are piled neatly on the tables, and many scrolls are held open with paperweights. A humanoid skeleton sits in one of the chairs here, a book still open on the table at its side.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b10",
-      "name": "10. Carillon Tower",
-      "description": "This stone tower has a red tile roof and an empty interior, except for some frescos painted where a stone staircase once led up to some sort of ruined machinery near the top of the tower. The frescos near the bottom seem to show a parade of citizens and a few tall towers and buildings. The higher paintings are difficult to see from the bottom. A huge pit in the center of the floor seems to drop down at least thirty feet.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b11",
-      "name": "11. Cloedel Conservatory",
-      "description": "This low round building appears to have once had some manner of trellis or ribbed canopy over it, that once may have served as some kind of roof.  What remains of the foundation is overgrown with a variety of thick mosses, low herbs, shrubbery, and lichen.",
-      "status": "Infested",
-      "infestationLevel": 5
-    },
-    {
-      "id": "b12",
-      "name": "12. The Brass Anchor",
-      "description": "The ground here contains a cylinder of golden metal under a thin layer of dirt and leaves. The metal ring is about four feet in diameter. There seem to be some runes written along the inside of the ring. This was a post for the city's rudder, an enormous mast and sail that could be used to steer the ship when combined with a complex set of block-and-tackle rigging, long since decayed away.",
-      "status": null
-    },
-    {
-      "id": "b13",
-      "name": "13. The Scholar's House",
-      "description": "The building contained a few intact artifacts, as well as a trash shute that previoulsy led below the city.",
-      "status": null
-    },
-    {
-      "id": "b14",
-      "name": "14. The Palace",
-      "description": "This massive building was once home to the Prince's that controlled the city, and where they held court. Most of the building has been gutted, and where once hung rich adornments is now nothing but bare wall.  Undead romed it's halls for untold ages, before adventurer's cleansed the place.",
-      "status": "Pacified",
-      "infestationLevel": null
-    },
-    {
-      "id": "b15",
-      "name": "15. The Temple",
-      "description": "UNKNOWN",
-      "status": "Unknown",
-      "infestationLevel": 999
-    },
-    {
-      "id": "b16",
-      "name": "16. UNKNOWN",
-      "description": "UNKNOWN",
-      "status": "Unknown",
-      "infestationLevel": 999
+      "type":"building",
+      "id":"buildings",
+      "buildings":[
+        {
+          "id": "b1",
+          "name": "1. Docks",
+          "description": "The massive wall is broken here by a series of five gates. Descending from these open archways down to the level of the plain are five ramps made of the same golden translucent material as the walls. Beyond the gates, the streets and alleys of the city are only partially visible, shrouded by a pale green mist that seems to seep out of the walls and cling to the ground.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b2",
+          "name": "2. Golden Terrace Wall",
+          "description": "Upon closer examination, it’s still unclear exactly what this wall is made of, as it resembles nearly opaque amber.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b3",
+          "name": "3. The Invisible Bridges",
+          "description": "These invisible, enclosed bridges connect the Aeromantic Infandibulum with the city’s other major towers: the Discordant Tower, the Needle and Globe Tower, the Quivering Tower, and the Stalker’s Nest. These bridges are tunnels made of pure force and cannot be dispelled.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b6",
+          "name": "6. Discordant Tower",
+          "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind, looking like a gigantic staff in the sky filled with holes. Dark shadows can be seen flitting inside the structure, never clear enough to make out.  Occasionally, loud grunting and snorting can be heard coming from the tower.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b5",
+          "name": "5. The Azlanti Flower",
+          "description": "This glass flower is eighty feet tall, but the glass is white rather than clear. It glows with a faint light during the full moon.  A building that envelopes it's base contains an orb of some kind, that allow the light level to be controlled, when it still functioned.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b4",
+          "name": "4. Quivering Tower",
+          "description": "Small bursts of static and arcs of electricity can be seen from this seventy-foot-tall, gray stone tower. Fernlike leaves quiver along it's face. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below them.  There are numerous spikey protrusions coming out of the stone, some of which are blackened and bent.",
+          "status": "Infested",
+          "infestationLevel": 6
+        },
+        {
+          "id": "b7",
+          "name": "7. Needle and Globe Tower",
+          "description": "This tower resembles a very thin reed or stalk with a puffball globe stuck halfway up the tower, fifty feet above the ground. The surface of the walls look like chitin, and numerous cracks ooze a sticky yellow sap.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b8",
+          "name": "8. The Aeromatic Mechanum",
+          "description": "This building resembles an enormous horn pointed to the sky, standing more than a hundred feet tall. It has a narrow section resting on the ground and a brilliant purple metallic cone pointing up into green mist. There seems to be no entrance at ground level, but each wall has a large hole on the right-hand side about halfway up the tower.  In times long past, the Mechanum allowed the city to rise and fall great heights through the air.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b9",
+          "name": "9. Flying Library",
+          "description": "The building has that unmistakable smell of parchment and papyrus that means ancient lore. Hundreds of books are piled neatly on the tables, and many scrolls are held open with paperweights. A humanoid skeleton sits in one of the chairs here, a book still open on the table at its side.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b10",
+          "name": "10. Carillon Tower",
+          "description": "This stone tower has a red tile roof and an empty interior, except for some frescos painted where a stone staircase once led up to some sort of ruined machinery near the top of the tower. The frescos near the bottom seem to show a parade of citizens and a few tall towers and buildings. The higher paintings are difficult to see from the bottom. A huge pit in the center of the floor seems to drop down at least thirty feet.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b11",
+          "name": "11. Cloedel Conservatory",
+          "description": "This low round building appears to have once had some manner of trellis or ribbed canopy over it, that once may have served as some kind of roof.  What remains of the foundation is overgrown with a variety of thick mosses, low herbs, shrubbery, and lichen.  The area to the West of the conservatory is open sky (rare in the city) and seemingly unpaved, but covered in thick weeds and brambles.",
+          "status": "Infested",
+          "infestationLevel": 5
+        },
+        {
+          "id": "b12",
+          "name": "12. The Brass Anchor",
+          "description": "The ground here contains a cylinder of golden metal under a thin layer of dirt and leaves. The metal ring is about four feet in diameter. There seem to be some runes written along the inside of the ring. This was a post for the city's rudder, an enormous mast and sail that could be used to steer the ship when combined with a complex set of block-and-tackle rigging, long since decayed away.",
+          "status": null
+        },
+        {
+          "id": "b13",
+          "name": "13. The Scholar's House",
+          "description": "The building contained a few intact artifacts, as well as a trash shute that previoulsy led below the city.",
+          "status": null
+        },
+        {
+          "id": "b14",
+          "name": "14. The Palace",
+          "description": "This massive building was once home to the Prince's that controlled the city, and where they held court. Most of the building has been gutted, and where once hung rich adornments is now nothing but bare wall.  Undead romed it's halls for untold ages, before adventurer's cleansed the place.",
+          "status": "Pacified",
+          "infestationLevel": null
+        },
+        {
+          "id": "b15",
+          "name": "15. The Temple",
+          "description": "UNKNOWN",
+          "status": "Unknown",
+          "infestationLevel": 999
+        },
+        {
+          "id": "b16",
+          "name": "16. UNKNOWN",
+          "description": "UNKNOWN",
+          "status": "Unknown",
+          "infestationLevel": 999
+        }
+      ]
     }
   ]
 }

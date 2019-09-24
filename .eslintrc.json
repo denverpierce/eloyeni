@@ -20,7 +20,8 @@
     "@typescript-eslint/member-delimiter-style":0,
     "@typescript-eslint/explicit-member-accessibility":["off" ],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types":"warn"
   },
   "settings": {
     "react": {

@@ -9,10 +9,6 @@ export interface BasicItem {
   name: string;
 }
 
-export interface NavPayload {
-  buildings: Building[]
-}
-
 export type LeftnavProps = {
   selectBuilding: Dispatch<any>
   selectedBuilding: Building | null;
