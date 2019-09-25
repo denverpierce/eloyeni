@@ -10,29 +10,30 @@ export interface BasicItem {
 }
 
 export type LeftnavProps = {
-  selectBuilding: Dispatch<any>
-  selectedBuilding: Building | null;
-  buildings: Building[]
+  selectItem: Dispatch<any>,
+  selectedItem: Building | null,
+  items: BasicItem[],
+  title: string
 };
 
-const header: JSX.Element = (<ListSubheader component="div">City Buildings</ListSubheader>);
-function Leftnav(props: LeftnavProps) {
 
-  const renderBuilding = (building: Building, idx: number): JSX.Element => {
-    const bldArrIndex = props.selectedBuilding ?
-      props.buildings.findIndex(bld => bld.id === props.selectedBuilding!.id) : -1;
+function Leftnav(props: LeftnavProps) {
+  const header: JSX.Element = (<ListSubheader component="div">{props.title}</ListSubheader>);
+  const renderItem = (item: BasicItem, idx: number): JSX.Element => {
+    const bldArrIndex = props.selectedItem ?
+      props.items.findIndex(bld => bld.id === props.selectedItem!.id) : -1;
 
     return (
       <MenuItem
         key={idx}
         selected={idx === bldArrIndex}
-        onClick={() => props.selectBuilding({
+        onClick={() => props.selectItem({
           type: 'selectBuilding',
-          selectedBuilding: building
+          selectedBuilding: item
         })}
 
       >
-        {building.name}
+        {item.name}
       </MenuItem >
     )
   }
@@ -43,12 +44,10 @@ function Leftnav(props: LeftnavProps) {
         component="nav"
         subheader={header}
         className={styles.leftNavContainer}>
-        {props.buildings.map(renderBuilding)}
+        {props.items.map(renderItem)}
       </List>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
-
-
 
 export default Leftnav;

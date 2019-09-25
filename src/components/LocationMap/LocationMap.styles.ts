@@ -4,6 +4,7 @@ import { rgba } from 'csx';
 const mainContainer = (buildingId: string | null) => {
   return style({
     display: 'flex',
+    position: 'relative',
     $nest: {
       [`#${buildingId}`]: {
         fill: rgba(255, 255, 255, 0.3).toString(),

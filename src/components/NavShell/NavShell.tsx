@@ -7,8 +7,8 @@ import LocationMap from '../LocationMap/LocationMap';
 import BuildingInformation from '../BuildingInformation/BuildingInformation';
 import { EloyeniState } from 'Eloyeni';
 import { BUCKET, EXPIRES, ACCESS_KEY } from 'utils/constants';
-import Headerbar from 'components/Headerbar/Headerbar';
 import { NavPayload, BuildingTab } from './NavShell.types';
+import { body } from './NavShell.styles';
 
 const assetSrcUrl = (strings: (string | number)[]) => {
   return `https://${strings[0]}${strings[1]}?AWSAccessKeyId=${strings[2]}&Signature=${strings[3]}&Expires=${strings[4]}`
@@ -21,22 +21,19 @@ type NavShellProps = {
 
 function NavShell(props: NavShellProps) {
   let mapSrc: string | undefined;
-  let nvUrl: string | undefined = undefined;
-  let nvSig: string | undefined = undefined;
   const [state, dispatch] = useReducer(buildingsReducer, undefined, buildingsInit);
 
   if (props.auth && props.auth.mapUrl && props.auth.mapSig) {
     // build the mapSrc string
     const { mapUrl, mapSig } = props.auth;
-    nvUrl = props.auth.navUrl;
-    nvSig = props.auth.navSig;
     mapSrc = assetSrcUrl([BUCKET, mapUrl, ACCESS_KEY, mapSig, EXPIRES]);
   }
 
   useEffect(() => {
     // get the navigation json file
-    if (props.auth && nvUrl && nvSig) {
-      axios.get<NavPayload>(assetSrcUrl([BUCKET, nvUrl, ACCESS_KEY, nvSig, EXPIRES])).then((resp) => {
+    if (props.auth && props.auth.navUrl && props.auth.navSig) {
+      const navSrc = assetSrcUrl([BUCKET, props.auth.navUrl, ACCESS_KEY, props.auth.navSig, EXPIRES]);
+      axios.get<NavPayload>(navSrc).then((resp) => {
         const tab = resp.data.tabs.find((_t, idx) => idx === props.auth.tab) as BuildingTab;
         if (tab) {
           dispatch({
@@ -46,15 +43,15 @@ function NavShell(props: NavShellProps) {
         }
       })
     }
-  }, [nvSig, nvUrl, props.auth, props.auth.tab]);
+  }, [props.auth]);
 
   return (
-    <React.Fragment>
-      <Headerbar tab={props.auth.tab} handleChangeTab={props.handleChangeTab} />
+    <div className={body}>
       <Leftnav
-        buildings={state.buildings}
-        selectBuilding={dispatch}
-        selectedBuilding={state.selectedBuilding}
+        items={state.buildings}
+        selectItem={dispatch}
+        selectedItem={state.selectedBuilding}
+        title={props.auth.tab.toString()}
       />
       <LocationMap
         selectBuilding={dispatch}
@@ -64,7 +61,7 @@ function NavShell(props: NavShellProps) {
       <BuildingInformation
         selectedBuilding={state.selectedBuilding}
       />
-    </React.Fragment>
+    </div>
   );
 }
 

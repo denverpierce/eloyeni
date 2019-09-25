@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Eloyeni.styles';
 import NavShell from './components/NavShell/NavShell';
+import Header from './components/Header/Header';
 import qs from 'querystring';
 
 export type EloyeniState = {
@@ -45,9 +46,8 @@ class Eloyeni extends Component<{}, EloyeniState> {
   render() {
     return (
       <div className={styles.container}>
-        <div className={'wrapper'}>
-          <NavShell auth={this.state} handleChangeTab={this.eventToTab} />
-        </div>
+        <Header tab={this.state.tab} handleChangeTab={this.eventToTab} />
+        <NavShell auth={this.state} handleChangeTab={this.eventToTab} />
       </div >
     );
   }

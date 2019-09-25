@@ -15,5 +15,5 @@ export type BuildingTab = {
 export type StatusTab = {
   type: "status",
   id: "status",
-  items: {}
+  items: []
 }

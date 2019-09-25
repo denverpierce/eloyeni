@@ -1,6 +1,6 @@
 import { style } from "typestyle";
 
-const leftNavContainer = style(
+export const headerStyle = style(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -13,11 +13,3 @@ const leftNavContainer = style(
     }
   }
 );
-
-const navItem = style({
-})
-
-export default {
-  leftNavContainer,
-  navItem
-}

@@ -1,14 +1,35 @@
 {
-  "tabs":[
+  "tabs": [
     {
-      "type":"status",
-      "id":"status",
-      "buildings":[]
+      "type": "status",
+      "id": "status",
+      "items": [
+        {
+          "id": "b1",
+          "name": "Aeromatic Mechanum"
+        },
+        {
+          "id": "b2",
+          "name": "Quivering Tower"
+        },
+        {
+          "id": "b3",
+          "name": "Discordant Tower"
+        },
+        {
+          "id": "b4",
+          "name": "The Azlanti Flower"
+        },
+        {
+          "id": "b5",
+          "name": "Needle and Globe Tower"
+        }
+      ]
     },
     {
-      "type":"building",
-      "id":"buildings",
-      "buildings":[
+      "type": "building",
+      "id": "buildings",
+      "buildings": [
         {
           "id": "b1",
           "name": "1. Docks",

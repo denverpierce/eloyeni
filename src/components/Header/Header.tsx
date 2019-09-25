@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { createStyles, withStyles } from '@material-ui/core/styles';
+import { headerStyle } from './Header.style';
 import { Tabs, Tab } from '@material-ui/core';
 
 const styles = createStyles({
@@ -15,7 +16,7 @@ const styles = createStyles({
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
-  },
+  }
 });
 
 function a11yProps(index: {}) {
@@ -25,16 +26,16 @@ function a11yProps(index: {}) {
   };
 }
 
-export type HeaderBarProps = {
+export type HeaderProps = {
   tab: number,
   handleChangeTab: (e: React.ChangeEvent<{}>, value: {}) => void
 }
 
-function Headerbar(props: HeaderBarProps) {
+function Header(props: HeaderProps) {
   const { tab, handleChangeTab } = props;
 
   return (
-    <AppBar position="static" color="primary" >
+    <AppBar color="primary" position={'relative'} className={headerStyle} >
       <Toolbar>
         <Typography variant="h6" color="inherit">Eloyeni</Typography>
         <Tabs value={tab} onChange={handleChangeTab} aria-label="tabs">
@@ -46,4 +47,4 @@ function Headerbar(props: HeaderBarProps) {
   );
 }
 
-export default withStyles(styles)(Headerbar);
+export default withStyles(styles)(Header);
