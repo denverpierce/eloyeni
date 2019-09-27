@@ -9,6 +9,7 @@ import { EloyeniState } from 'Eloyeni';
 import { BUCKET, EXPIRES, ACCESS_KEY } from 'utils/constants';
 import { NavPayload, BuildingTab } from './NavShell.types';
 import { body } from './NavShell.styles';
+import { Route, Switch } from "react-router-dom";
 
 const assetSrcUrl = (strings: (string | number)[]) => {
   return `https://${strings[0]}${strings[1]}?AWSAccessKeyId=${strings[2]}&Signature=${strings[3]}&Expires=${strings[4]}`
@@ -53,14 +54,33 @@ function NavShell(props: NavShellProps) {
         selectedItem={state.selectedBuilding}
         title={props.auth.tab.toString()}
       />
-      <LocationMap
-        selectBuilding={dispatch}
-        buildingState={state}
-        mapSrc={mapSrc}
-      />
-      <BuildingInformation
-        selectedBuilding={state.selectedBuilding}
-      />
+      <Switch>
+        <Route path="/" exact render={() =>
+          <React.Fragment>
+            <LocationMap
+              selectBuilding={dispatch}
+              buildingState={state}
+              mapSrc={mapSrc}
+            />
+            <BuildingInformation
+              selectedBuilding={state.selectedBuilding}
+            />
+          </React.Fragment>
+        } />
+        <Route path="/status/" render={() => <p>aaa</p>} />
+        <Route path="/buildings/" exact={true} render={() =>
+          <React.Fragment>
+            <LocationMap
+              selectBuilding={dispatch}
+              buildingState={state}
+              mapSrc={mapSrc}
+            />
+            <BuildingInformation
+              selectedBuilding={state.selectedBuilding}
+            />
+          </React.Fragment>
+        } />
+      </Switch>
     </div>
   );
 }

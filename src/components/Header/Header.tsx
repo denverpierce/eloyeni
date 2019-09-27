@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { createStyles, withStyles } from '@material-ui/core/styles';
 import { headerStyle } from './Header.style';
 import { Tabs, Tab } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const styles = createStyles({
   root: {
@@ -26,6 +27,23 @@ function a11yProps(index: {}) {
   };
 }
 
+interface LinkTabProps {
+  label?: string;
+  href?: string;
+}
+
+function LinkTab(props: LinkTabProps) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
+}
+
 export type HeaderProps = {
   tab: number,
   handleChangeTab: (e: React.ChangeEvent<{}>, value: {}) => void
@@ -38,12 +56,10 @@ function Header(props: HeaderProps) {
     <AppBar color="primary" position={'relative'} className={headerStyle} >
       <Toolbar>
         <Typography variant="h6" color="inherit">Eloyeni</Typography>
-        <Tabs value={tab} onChange={handleChangeTab} aria-label="tabs">
-          <Tab label="Status" {...a11yProps(0)} />
-          <Tab label="Buildings" {...a11yProps(1)} />
-        </Tabs>
-      </Toolbar>
-    </AppBar>
+        <Link to="/buildings/">Buildings</Link>
+        <Link to="/status/">Status</Link>
+      </Toolbar >
+    </AppBar >
   );
 }
 

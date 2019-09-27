@@ -3,6 +3,7 @@ import styles from './Eloyeni.styles';
 import NavShell from './components/NavShell/NavShell';
 import Header from './components/Header/Header';
 import qs from 'querystring';
+import { BrowserRouter } from "react-router-dom";
 
 export type EloyeniState = {
   mapUrl: string | undefined,
@@ -46,8 +47,10 @@ class Eloyeni extends Component<{}, EloyeniState> {
   render() {
     return (
       <div className={styles.container}>
-        <Header tab={this.state.tab} handleChangeTab={this.eventToTab} />
-        <NavShell auth={this.state} handleChangeTab={this.eventToTab} />
+        <BrowserRouter>
+          <Header tab={this.state.tab} handleChangeTab={this.eventToTab} />
+          <NavShell auth={this.state} handleChangeTab={this.eventToTab} />
+        </BrowserRouter>
       </div >
     );
   }
