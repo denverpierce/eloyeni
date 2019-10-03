@@ -6,30 +6,35 @@
       "items": [
         {
           "id": "b1",
-          "name": "Aeromatic Mechanum"
+          "name": "Aeromatic Mechanum",
+          "description": "This building resembles an enormous horn pointed to the sky, standing more than a hundred feet tall. It has a narrow section resting on the ground and a brilliant purple metallic cone pointing up into green mist. There seems to be no entrance at ground level, but each wall has a large hole on the right-hand side about halfway up the tower.  In times long past, the Mechanum allowed the city to rise and fall great heights through the air."
         },
         {
           "id": "b2",
-          "name": "Quivering Tower"
+          "name": "Quivering Tower",
+          "description": "Small bursts of static and arcs of electricity can be seen from this seventy-foot-tall, gray stone tower. Fernlike leaves quiver along it's face. The upper tower has several ledges, balconies, and openings, and white streaks from droppings discolor the stone below them.  There are numerous spikey protrusions coming out of the stone, some of which are blackened and bent."
         },
         {
           "id": "b3",
-          "name": "Discordant Tower"
+          "name": "Discordant Tower",
+          "description": "This hundred-foot-tall tower has scores of small holes in it that catch the wind, looking like a gigantic staff in the sky filled with holes. Dark shadows can be seen flitting inside the structure, never clear enough to make out.  Occasionally, loud grunting and snorting can be heard coming from the tower."
         },
         {
           "id": "b4",
-          "name": "The Azlanti Flower"
+          "name": "The Azlanti Flower",
+          "description": "This glass flower is eighty feet tall, but the glass is white rather than clear. It glows with a faint light during the full moon.  A building that envelopes it's base contains an orb of some kind, that allow the light level to be controlled, when it still functioned."
         },
         {
           "id": "b5",
-          "name": "Needle and Globe Tower"
+          "name": "Needle and Globe Tower",
+          "description": "This tower resembles a very thin reed or stalk with a puffball globe stuck halfway up the tower, fifty feet above the ground. The surface of the walls look like chitin, and numerous cracks ooze a sticky yellow sap."
         }
       ]
     },
     {
       "type": "building",
       "id": "buildings",
-      "buildings": [
+      "items": [
         {
           "id": "b1",
           "name": "1. Docks",

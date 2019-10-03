@@ -30,8 +30,8 @@ export function buildingsReducer(state: BuildingState, action: any): BuildingSta
     case 'setBuildings':
       return {
         ...state,
-        selectedBuilding: action.buildings[0],
-        buildings: action.buildings
+        selectedBuilding: action.items[0],
+        buildings: action.items
       };
     case 'reset':
       return buildingsInit();

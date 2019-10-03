@@ -28,7 +28,7 @@ function TabInfo(tab: Tab) {
     </CardActionArea>
     <CardActions>
       <Button size="medium">
-        <Link to={tab.route}>Cast Spell</Link>
+        <Link to={{ pathname: tab.route, search: window.location.search }}>Cast Spell</Link>
       </Button>
     </CardActions>
   </Card >)

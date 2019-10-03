@@ -1,17 +1,15 @@
 import React, { useReducer, useEffect } from 'react';
-import { buildingsReducer } from '../../state/Buildings.reducer';
-import { buildingsInit } from './../../state/Buildings.reducer';
-import Leftnav from '../Leftnav/Leftnav';
 import axios from 'axios';
-import LocationMap from '../LocationMap/LocationMap';
-import BuildingInformation from '../BuildingInformation/BuildingInformation';
 import { EloyeniState } from 'Eloyeni';
 import { BUCKET, EXPIRES, ACCESS_KEY } from 'utils/constants';
-import { NavPayload, BuildingTab } from './NavShell.types';
+import { NavPayload, BuildingTab, TabId, Tab } from './NavShell.types';
 import { body } from './NavShell.styles';
 import { Route, Switch } from "react-router-dom";
 import { navReducer, navInit } from 'state/Nav.reducer';
 import { Home } from 'views/home/Home';
+import { Buildings } from 'views/buildings/Buildings';
+import Leftnav from 'components/Leftnav/Leftnav';
+import { isEmpty } from 'lodash';
 
 const assetSrcUrl = (strings: (string | number)[]) => {
   return `https://${strings[0]}${strings[1]}?AWSAccessKeyId=${strings[2]}&Signature=${strings[3]}&Expires=${strings[4]}`
@@ -20,6 +18,14 @@ const assetSrcUrl = (strings: (string | number)[]) => {
 type NavShellProps = {
   auth: EloyeniState,
   handleChangeTab: (e: React.ChangeEvent<{}>, value: {}) => void
+}
+
+const getTabData = (tabId: TabId, nav: NavPayload): Tab => {
+  const retTab = nav.tabs.find(t => t.id === tabId);
+  if (!retTab) {
+    throw new TypeError('The tab couldn\'t be found');
+  }
+  return retTab;
 }
 
 function NavShell(props: NavShellProps) {
@@ -50,20 +56,13 @@ function NavShell(props: NavShellProps) {
     <div className={body}>
       <Switch>
         <Route path="/" exact render={() =>
-          <Home tabs={navState.tabs} />
+          (!isEmpty(navState.tabs) ? <Home tabs={navState.tabs} /> : null)
         } />
-        <Route path="/status/" render={() => <p>aaa</p>} />
-        <Route path="/buildings/" exact={true} render={() =>
-          <React.Fragment>
-            {/* <LocationMap
-              selectBuilding={dispatch}
-              buildingState={state}
-              mapSrc={mapSrc}
-            />
-            <BuildingInformation
-              selectedBuilding={state.selectedBuilding}
-            /> */}
-          </React.Fragment>
+        <Route path="/:page?/" exact={true} render={(props) =>
+          (!isEmpty(navState.tabs) ? <Buildings
+            tabData={getTabData(props.match.params.page, navState) as BuildingTab}
+            mapSrc={mapSrc}
+          /> : null)
         } />
       </Switch>
     </div>

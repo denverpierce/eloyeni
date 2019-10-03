@@ -1,19 +1,23 @@
 import { Building } from './../../state/Buildings.reducer';
+import { BasicItem } from './../Leftnav/Leftnav';
 
 export type NavPayload = {
   tabs: Tab[]
 }
 
+export type TabId = 'status' | 'building';
+
 export type Tab = {
-  type: 'building' | 'status',
-  id: 'status' | 'status',
+  type: 'buildings' | 'status',
+  id: TabId,
   route: string,
+  items: BasicItem[]
 }
 
 export type BuildingTab = Tab & {
   type: "building",
-  id: "building",
-  buildings: Building[]
+  id: "buildings",
+  items: Building[]
 }
 
 export type StatusTab = Tab & {

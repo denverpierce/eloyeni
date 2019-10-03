@@ -55,9 +55,9 @@ function Header(props: HeaderProps) {
   return (
     <AppBar color="primary" position={'relative'} className={headerStyle} >
       <Toolbar>
-        <Typography variant="h6" color="inherit">Eloyeni</Typography>
-        <Link to="/buildings/">Buildings</Link>
-        <Link to="/status/">Status</Link>
+        <Typography variant="h6" color="inherit"><Link to={{ pathname: '/', search: window.location.search }}>Eloyeni</Link></Typography>
+        <Link to={{ pathname: "/buildings/", search: window.location.search }}>Buildings</Link>
+        <Link to={{ pathname: "/status/", search: window.location.search }}>Status</Link>
       </Toolbar >
     </AppBar >
   );
