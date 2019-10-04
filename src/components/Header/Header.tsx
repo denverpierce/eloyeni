@@ -1,11 +1,10 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { createStyles, withStyles } from '@material-ui/core/styles';
 import { headerStyle } from './Header.style';
-import { Tabs, Tab } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import MaterialLink from '@material-ui/core/Link';
+import { useHistory } from "react-router"
 
 const styles = createStyles({
   root: {
@@ -20,30 +19,6 @@ const styles = createStyles({
   }
 });
 
-function a11yProps(index: {}) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
-
-interface LinkTabProps {
-  label?: string;
-  href?: string;
-}
-
-function LinkTab(props: LinkTabProps) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
-}
-
 export type HeaderProps = {
   tab: number,
   handleChangeTab: (e: React.ChangeEvent<{}>, value: {}) => void
@@ -51,13 +26,24 @@ export type HeaderProps = {
 
 function Header(props: HeaderProps) {
   const { tab, handleChangeTab } = props;
+  let history = useHistory();
+
+  const clickHome = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    history.push({ pathname: '/', search: window.location.search })
+  }
+  const clickBuildings = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    history.push({ pathname: "/buildings/", search: window.location.search })
+  }
+  const clickStatus = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    history.push({ pathname: "/status/", search: window.location.search })
+  }
 
   return (
     <AppBar color="primary" position={'relative'} className={headerStyle} >
       <Toolbar>
-        <Typography variant="h6" color="inherit"><Link to={{ pathname: '/', search: window.location.search }}>Eloyeni</Link></Typography>
-        <Link to={{ pathname: "/buildings/", search: window.location.search }}>Buildings</Link>
-        <Link to={{ pathname: "/status/", search: window.location.search }}>Status</Link>
+        <MaterialLink variant="h4" color="inherit" onClick={clickHome}>Eloyeni</MaterialLink>
+        <MaterialLink variant="h6" color="inherit" onClick={clickBuildings}>Buildings</MaterialLink>
+        <MaterialLink variant="h6" color="inherit" onClick={clickStatus}>Status</MaterialLink>
       </Toolbar >
     </AppBar >
   );

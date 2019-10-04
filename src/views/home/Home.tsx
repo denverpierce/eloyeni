@@ -9,13 +9,14 @@ import {
   Button,
 } from '@material-ui/core';
 import { Tab } from 'components/NavShell/NavShell.types';
+import { cardStyles } from './Home.styles';
 
 export type HomeProps = {
   tabs: Tab[]
 }
 
 function TabInfo(tab: Tab) {
-  return (<Card>
+  return (<Card className={cardStyles}>
     <CardActionArea>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
@@ -35,6 +36,7 @@ function TabInfo(tab: Tab) {
 }
 
 export function Home(props: HomeProps) {
+
   const { tabs } = props;
   return (
     <React.Fragment>

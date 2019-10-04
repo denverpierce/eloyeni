@@ -8,7 +8,6 @@ import { Route, Switch } from "react-router-dom";
 import { navReducer, navInit } from 'state/Nav.reducer';
 import { Home } from 'views/home/Home';
 import { Buildings } from 'views/buildings/Buildings';
-import Leftnav from 'components/Leftnav/Leftnav';
 import { isEmpty } from 'lodash';
 
 const assetSrcUrl = (strings: (string | number)[]) => {
