@@ -11,7 +11,7 @@
     "@types/react": "16.8.13",
     "@types/react-dom": "16.8.3",
     "@types/react-router-dom": "^5.1.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "csx": "^9.1.0",
     "gh-pages": "^2.0.1",
     "lodash": "^4.17.15",
